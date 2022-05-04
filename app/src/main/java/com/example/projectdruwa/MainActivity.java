@@ -8,7 +8,6 @@ public class MainActivity extends AppCompatActivity {
     //branch Test
     //branch Test2
     //branch Test3
-    //branch Test6
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
