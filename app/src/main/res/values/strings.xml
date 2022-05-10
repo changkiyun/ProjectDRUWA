@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ProjectDRUWA</string>
+    <string name="save">저장</string>
+    <string name="manner_title">매너 평가</string>
 </resources>
