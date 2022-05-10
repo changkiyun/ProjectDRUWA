@@ -10,7 +10,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:background="@drawable/round"
-        android:text="매너 평가"
+        android:text="매너 평가평가평가"
         android:textSize="20dp"
         android:textAlignment="center"
         android:textColor="#ffffff"
