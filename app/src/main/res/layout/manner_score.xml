@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--타이틀-->
+    <TextView
+        android:id="@+id/manner_title"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round"
+        android:text="@string/manner_title"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+   <!--평가할 프로필들이 나열되는 레이아웃-->
+    <LinearLayout
+        android:id="@+id/profile_list"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/manner_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <!--프로필 레이아웃-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile_1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:padding="10sp">
+            <ImageView
+                android:id="@+id/profile_1_pic"
+                android:src="@drawable/ic_launcher_background"
+                android:layout_height="60sp"
+                android:layout_width="60sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                android:id="@+id/profile_1_name"
+                android:layout_height="20sp"
+                android:layout_width="60sp"
+                android:layout_marginTop="5sp"
+                android:text="이름"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                app:layout_constraintTop_toBottomOf="@id/profile_1_pic"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <RatingBar
+                android:id="@+id/profile_1_Rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:isIndicator="false"
+                android:max="5"
+                android:numStars="5"
+                android:rating="0"
+                android:stepSize="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/profile_1_pic"
+                app:layout_constraintTop_toTopOf="parent">
+            </RatingBar>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <!--평가 저장 버튼-->
+    <Button
+        android:id="@+id/manner_confirm"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20sp"
+        android:textSize="20sp"
+        android:text="@string/save"
+        app:layout_constraintTop_toBottomOf="@id/profile_list"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

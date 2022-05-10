@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/userImg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/ic_launcher_background" />
+
+    <ImageView
+        android:id="@+id/addPhoto"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintStart_toEndOf="@+id/userImg" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="원하시는 사진을\n 추가해 주세요."
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/userImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addPhoto"
+        app:layout_constraintTop_toTopOf="@+id/userImg" />
+
+    <EditText
+        android:id="@+id/createRoomName"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:hint="방 제목을 입력해 주세요"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userImg" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/createRoomName">
+
+        <TableLayout
+            android:id="@+id/gridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:stretchColumns="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TableRow
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_gravity="center_vertical"
+                    android:text="최대인원"
+                    android:textSize="20dp" />
+
+                <Spinner
+                    android:id="@+id/spinner_field_MaxCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:spinnerMode="dropdown"
+                    android:textColor="@color/black" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_gravity="center_vertical"
+                    android:text="타수"
+                    android:textSize="20dp" />
+
+                <Spinner
+                    android:id="@+id/spinner_field_HitCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:spinnerMode="dropdown"
+                    android:textColor="@color/black" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/tv3"
+                    android:layout_gravity="center_vertical"
+                    android:text="성별"
+                    android:textSize="20dp" />
+
+                <Spinner
+                    android:id="@+id/spinner_field_Sex"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:spinnerMode="dropdown"
+                    android:textColor="@color/black" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/tv4"
+                    android:layout_gravity="center_vertical"
+                    android:text="최대인원"
+                    android:textSize="20dp" />
+
+                <Spinner
+                    android:id="@+id/spinner_field_Age"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:spinnerMode="dropdown"
+                    android:textColor="@color/black" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/tv5"
+                    android:layout_gravity="center_vertical"
+                    android:text="장소"
+                    android:textSize="20dp" />
+
+                <Spinner
+                    android:id="@+id/spinner_field_Place"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:spinnerMode="dropdown"
+                    android:textColor="@color/black" />
+            </TableRow>
+
+        </TableLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/createRoom"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_200"
+        android:text="라운딩 개설"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
