@@ -49,7 +49,7 @@
                 android:layout_height="20sp"
                 android:layout_width="60sp"
                 android:layout_marginTop="5sp"
-                android:text=""
+                android:text="이름"
                 android:textSize="12sp"
                 android:textAlignment="center"
                 app:layout_constraintTop_toBottomOf="@id/profile_1_pic"
@@ -70,7 +70,6 @@
                 app:layout_constraintTop_toTopOf="parent">
             </RatingBar>
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </LinearLayout>
 
     <!--평가 저장 버튼-->
