@@ -12,10 +12,12 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity implements OnTabItemSelectedListener {
     private static final String TAG = "MainActivity";
 
+    //업데이트 프로젝트 확인
     MatchingList matchingList;
     UserInformation userInformation;
 
     BottomNavigationView bottomNavigation;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,19 +36,19 @@ public class MainActivity extends AppCompatActivity implements OnTabItemSelected
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.tab1:
-                        Toast.makeText(getApplicationContext(), "첫 번째 탭 선택됨", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "매칭리스트 탭 선택됨", Toast.LENGTH_LONG).show();
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.container, matchingList).commit();
 
                         return true;
                     case R.id.tab2:
-                        Toast.makeText(getApplicationContext(), "두 번째 탭 선택됨", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "참여리스트 탭 선택됨", Toast.LENGTH_LONG).show();
                         getSupportFragmentManager().beginTransaction()
-                                .replace(R.id.container, userInformation).commit();
+                                .replace(R.id.container, matchingList).commit();
 
                         return true;
                     case R.id.tab3:
-                        Toast.makeText(getApplicationContext(), "세 번째 탭 선택됨", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "유저정보 탭 선택됨", Toast.LENGTH_LONG).show();
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.container, userInformation).commit();
 
