@@ -1,5 +1,6 @@
 package com.example.projectdruwa;
 
+//참고코드 YCK
 public class Note {
     int _id;
     String weather;
