@@ -19,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-   <!--평가할 프로필들이 나열되는 레이아웃-->
+    <!--평가할 프로필들이 나열되는 레이아웃-->
     <LinearLayout
         android:id="@+id/profile_list"
         android:layout_height="wrap_content"
@@ -31,11 +31,13 @@
         android:orientation="vertical">
 
         <!--프로필 레이아웃-->
+        <!--1번 프로필-->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/profile_1"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:padding="10sp">
+            android:padding="10sp"
+            android:visibility="visible">
             <ImageView
                 android:id="@+id/profile_1_pic"
                 android:src="@drawable/ic_launcher_background"
@@ -67,6 +69,129 @@
                 android:stepSize="1"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toRightOf="@id/profile_1_pic"
+                app:layout_constraintTop_toTopOf="parent">
+            </RatingBar>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--2번 프로필-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile_2"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:padding="10sp"
+            android:visibility="visible">
+            <ImageView
+                android:id="@+id/profile_2_pic"
+                android:src="@drawable/ic_launcher_background"
+                android:layout_height="60sp"
+                android:layout_width="60sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                android:id="@+id/profile_2_name"
+                android:layout_height="20sp"
+                android:layout_width="60sp"
+                android:layout_marginTop="5sp"
+                android:text="이름"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                app:layout_constraintTop_toBottomOf="@id/profile_2_pic"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <RatingBar
+                android:id="@+id/profile_2_Rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:isIndicator="false"
+                android:max="5"
+                android:numStars="5"
+                android:rating="0"
+                android:stepSize="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/profile_2_pic"
+                app:layout_constraintTop_toTopOf="parent">
+            </RatingBar>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--3번 프로필-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile_3"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:padding="10sp"
+            android:visibility="visible">
+            <ImageView
+                android:id="@+id/profile_3_pic"
+                android:src="@drawable/ic_launcher_background"
+                android:layout_height="60sp"
+                android:layout_width="60sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                android:id="@+id/profile_3_name"
+                android:layout_height="20sp"
+                android:layout_width="60sp"
+                android:layout_marginTop="5sp"
+                android:text="이름"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                app:layout_constraintTop_toBottomOf="@id/profile_3_pic"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <RatingBar
+                android:id="@+id/profile_3_Rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:isIndicator="false"
+                android:max="5"
+                android:numStars="5"
+                android:rating="0"
+                android:stepSize="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/profile_3_pic"
+                app:layout_constraintTop_toTopOf="parent">
+            </RatingBar>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--4번 프로필-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile_4"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:padding="10sp"
+            android:visibility="visible">
+            <ImageView
+                android:id="@+id/profile_4_pic"
+                android:src="@drawable/ic_launcher_background"
+                android:layout_height="60sp"
+                android:layout_width="60sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                android:id="@+id/profile_4_name"
+                android:layout_height="20sp"
+                android:layout_width="60sp"
+                android:layout_marginTop="5sp"
+                android:text="이름"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                app:layout_constraintTop_toBottomOf="@id/profile_4_pic"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <RatingBar
+                android:id="@+id/profile_4_Rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:isIndicator="false"
+                android:max="5"
+                android:numStars="5"
+                android:rating="0"
+                android:stepSize="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/profile_4_pic"
                 app:layout_constraintTop_toTopOf="parent">
             </RatingBar>
         </androidx.constraintlayout.widget.ConstraintLayout>
