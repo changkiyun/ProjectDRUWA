@@ -42,19 +42,19 @@ public class MainActivity extends AppCompatActivity implements OnTabItemSelected
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.tab1:
-                        Toast.makeText(getApplicationContext(), "매칭리스트 탭 선택됨", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "매칭리스트 탭 선택됨", Toast.LENGTH_SHORT).show();
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.container, matchingList).commit();
 
                         return true;
                     case R.id.tab2:
-                        Toast.makeText(getApplicationContext(), "참여리스트 탭 선택됨", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "참여리스트 탭 선택됨", Toast.LENGTH_SHORT).show();
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.container, matchingList).commit();
 
                         return true;
                     case R.id.tab3:
-                        Toast.makeText(getApplicationContext(), "유저정보 탭 선택됨", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "유저정보 탭 선택됨", Toast.LENGTH_SHORT).show();
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.container, userInformation).commit();
 
@@ -66,14 +66,15 @@ public class MainActivity extends AppCompatActivity implements OnTabItemSelected
         });
 
         //매너평가 화면 출력
-        btn1 = (ImageButton) findViewById(R.id.button);
+        // 오류나서 주석처리 YCK
+//       btn1 = (ImageButton) findViewById(R.id.button);
 
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
+//        btn1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//            }
+//        });
     }
     //Fragment 전환 코드 YCK
     public void onTabSelected(int position) {
