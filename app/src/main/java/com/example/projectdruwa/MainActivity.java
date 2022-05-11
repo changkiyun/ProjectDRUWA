@@ -12,10 +12,11 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity implements OnTabItemSelectedListener {
     private static final String TAG = "MainActivity";
 
-    //업데이트 프로젝트 확인
+    // matchingList, userInformation Fragment 변수 YCK
     MatchingList matchingList;
     UserInformation userInformation;
 
+    //네비게이션바 변수 YCK
     BottomNavigationView bottomNavigation;
 
 
@@ -24,9 +25,9 @@ public class MainActivity extends AppCompatActivity implements OnTabItemSelected
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Fragment 전환 코드 YCK
         userInformation = new UserInformation();
         matchingList = new MatchingList();
-
 
         getSupportFragmentManager().beginTransaction().replace(R.id.container, matchingList).commit();
 
@@ -60,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements OnTabItemSelected
         });
 
     }
-
+    //Fragment 전환 코드 YCK
     public void onTabSelected(int position) {
         if (position == 0) {
             bottomNavigation.setSelectedItemId(R.id.tab1);

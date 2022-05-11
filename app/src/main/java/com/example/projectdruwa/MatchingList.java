@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+//MatchingList Fragment 처리 YCK
 public class MatchingList extends Fragment {
     @Nullable
     @Override
