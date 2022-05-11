@@ -10,16 +10,18 @@
         android:id="@+id/userImg"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:src="@drawable/ic_launcher_background" />
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/addPhoto"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:layout_marginLeft="10dp"
         android:src="@drawable/ic_launcher_background"
-        app:layout_constraintStart_toEndOf="@+id/userImg" />
+        app:layout_constraintLeft_toRightOf="@id/userImg"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -36,8 +38,8 @@
         android:layout_width="350dp"
         android:layout_height="40dp"
         android:hint="방 제목을 입력해 주세요"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userImg" />
@@ -46,6 +48,8 @@
         android:id="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/createRoomName">
 
         <TableLayout
