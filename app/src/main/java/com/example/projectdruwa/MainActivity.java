@@ -2,6 +2,9 @@ package com.example.projectdruwa;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -18,6 +21,8 @@ public class MainActivity extends AppCompatActivity implements OnTabItemSelected
 
     BottomNavigationView bottomNavigation;
 
+    //매너평가 화면출력
+    ImageButton btn1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +64,15 @@ public class MainActivity extends AppCompatActivity implements OnTabItemSelected
             }
         });
 
+        //매너평가 화면 출력
+        btn1 = (ImageButton) findViewById(R.id.button);
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 
     public void onTabSelected(int position) {
