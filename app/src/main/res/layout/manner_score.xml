@@ -51,7 +51,7 @@
                 android:layout_height="20sp"
                 android:layout_width="60sp"
                 android:layout_marginTop="5sp"
-                android:text="이름"
+                android:text="이름임"
                 android:textSize="12sp"
                 android:textAlignment="center"
                 app:layout_constraintTop_toBottomOf="@id/profile1_pic"
