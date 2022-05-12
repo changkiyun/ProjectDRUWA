@@ -6,20 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!--유저 이미지, 사진버튼, 텍스트뷰-->
     <ImageView
         android:id="@+id/userImg"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:src="@drawable/ic_launcher_background"
+        android:layout_width="80sp"
+        android:layout_height="80sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="20sp"
+        android:src="@drawable/user"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/addPhoto"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginLeft="10dp"
-        android:src="@drawable/ic_launcher_background"
+        android:layout_width="80sp"
+        android:layout_height="80sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="20sp"
+        android:src="@drawable/camera"
         app:layout_constraintLeft_toRightOf="@id/userImg"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,28 +31,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="원하시는 사진을\n 추가해 주세요."
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/userImg"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/addPhoto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/addPhoto"
-        app:layout_constraintTop_toTopOf="@+id/userImg" />
+        app:layout_constraintTop_toTopOf="@+id/addPhoto" />
 
+    <!--에딧 텍스트 방제목 입력칸-->
     <EditText
         android:id="@+id/createRoomName"
-        android:layout_width="350dp"
-        android:layout_height="40dp"
+        android:layout_width="350sp"
+        android:layout_height="40sp"
         android:hint="방 제목을 입력해 주세요"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="0dp"
+        android:layout_marginTop="50sp"
+        android:layout_marginBottom="0sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userImg" />
 
+    <!--최대인원~장소까지 묶인 스크롤뷰-->
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/createRoomName">
 
@@ -64,14 +70,14 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TableRow
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp">
+                android:layout_marginTop="5sp"
+                android:layout_marginBottom="5sp">
 
                 <TextView
                     android:id="@+id/tv1"
                     android:layout_gravity="center_vertical"
                     android:text="최대인원"
-                    android:textSize="20dp" />
+                    android:textSize="20sp" />
 
                 <Spinner
                     android:id="@+id/spinner_field_MaxCount"
@@ -82,14 +88,14 @@
             </TableRow>
 
             <TableRow
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp">
+                android:layout_marginTop="5sp"
+                android:layout_marginBottom="5sp">
 
                 <TextView
                     android:id="@+id/tv2"
                     android:layout_gravity="center_vertical"
                     android:text="타수"
-                    android:textSize="20dp" />
+                    android:textSize="20sp" />
 
                 <Spinner
                     android:id="@+id/spinner_field_HitCount"
@@ -100,14 +106,14 @@
             </TableRow>
 
             <TableRow
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp">
+                android:layout_marginTop="5sp"
+                android:layout_marginBottom="5sp">
 
                 <TextView
                     android:id="@+id/tv3"
                     android:layout_gravity="center_vertical"
                     android:text="성별"
-                    android:textSize="20dp" />
+                    android:textSize="20sp" />
 
                 <Spinner
                     android:id="@+id/spinner_field_Sex"
@@ -118,14 +124,14 @@
             </TableRow>
 
             <TableRow
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp">
+                android:layout_marginTop="5sp"
+                android:layout_marginBottom="5sp">
 
                 <TextView
                     android:id="@+id/tv4"
                     android:layout_gravity="center_vertical"
                     android:text="최대인원"
-                    android:textSize="20dp" />
+                    android:textSize="20sp" />
 
                 <Spinner
                     android:id="@+id/spinner_field_Age"
@@ -136,14 +142,14 @@
             </TableRow>
 
             <TableRow
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp">
+                android:layout_marginTop="5sp"
+                android:layout_marginBottom="5sp">
 
                 <TextView
                     android:id="@+id/tv5"
                     android:layout_gravity="center_vertical"
                     android:text="장소"
-                    android:textSize="20dp" />
+                    android:textSize="20sp" />
 
                 <Spinner
                     android:id="@+id/spinner_field_Place"
@@ -157,12 +163,15 @@
 
     </ScrollView>
 
+    <!--라운딩 개설 버튼-->
     <Button
         android:id="@+id/createRoom"
-        android:layout_width="200dp"
+        android:layout_width="200sp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/teal_200"
         android:text="라운딩 개설"
+        android:textSize="20sp"
+        android:layout_marginBottom="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

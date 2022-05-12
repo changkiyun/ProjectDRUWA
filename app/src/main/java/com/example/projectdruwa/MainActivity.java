@@ -1,5 +1,6 @@
 package com.example.projectdruwa;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -65,6 +66,17 @@ public class MainActivity extends AppCompatActivity implements OnTabItemSelected
             }
         });
 
+        //버튼 클릭시 인텐드 넘겨서 rounding_create 열기
+        Button roundingCreate;
+        roundingCreate = findViewById(R.id.roundingCreateButton);
+        roundingCreate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intend = new Intent(MainActivity.this,RoundingCreate.class);
+                startActivity(intend);
+            }
+        });
+    }
         //매너평가 화면 출력
         // 오류나서 주석처리 YCK
 //       btn1 = (ImageButton) findViewById(R.id.button);
