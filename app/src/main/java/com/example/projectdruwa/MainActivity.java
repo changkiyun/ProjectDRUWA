@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity implements OnTabItemSelected
         });
 
         //CJW : 지금 왠지 모르겠는데 프래그먼트 첫페이지에서 만든 이미지버튼에 링크하면 아예 오류나고안열림 버튼하나 더맹글어서 연결하니 제대로열림.
+        //CJW : 지워야할 테스트 주석
         //CJW : 상단 전구 버튼 클릭시 다이얼로그 창 필터링열기
         filterDialog= new Dialog(MainActivity.this);
         filterDialog.requestWindowFeature(Window.FEATURE_NO_TITLE); // 타이틀 제거
