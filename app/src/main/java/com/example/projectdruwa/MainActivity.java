@@ -1,7 +1,10 @@
 package com.example.projectdruwa;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -17,7 +20,6 @@ public class MainActivity extends AppCompatActivity implements OnTabItemSelected
     UserInformation userInformation;
 
     BottomNavigationView bottomNavigation;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +61,16 @@ public class MainActivity extends AppCompatActivity implements OnTabItemSelected
             }
         });
 
+        //버튼 클릭시 인텐드 넘겨서 rounding_create 열기
+        Button roundingCreate;
+        roundingCreate = findViewById(R.id.roundingCreateButton);
+        roundingCreate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intend = new Intent(MainActivity.this,RoundingCreate.class);
+                startActivity(intend);
+            }
+        });
     }
 
     public void onTabSelected(int position) {
