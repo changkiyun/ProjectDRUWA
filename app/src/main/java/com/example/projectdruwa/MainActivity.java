@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     // matchingList, userInformation Fragment 변수 YCK
     MatchingList matchingList;
+    MessageList messageList;
     UserInformation userInformation;
 
     //네비게이션바 변수 YCK
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Fragment 전환 코드 YCK
         userInformation = new UserInformation();
+        messageList = new MessageList();
         matchingList = new MatchingList();
 
         getSupportFragmentManager().beginTransaction().replace(R.id.container, matchingList).commit();
@@ -48,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.tab2:
                         Toast.makeText(getApplicationContext(), "참여리스트 탭 선택됨", Toast.LENGTH_SHORT).show();
                         getSupportFragmentManager().beginTransaction()
-                                .replace(R.id.container, matchingList).commit();
+                                .replace(R.id.container, messageList).commit();
 
                         return true;
                     case R.id.tab3:
