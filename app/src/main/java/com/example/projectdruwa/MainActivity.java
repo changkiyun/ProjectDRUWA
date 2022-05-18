@@ -1,7 +1,10 @@
 package com.example.projectdruwa;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -17,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements OnTabItemSelected
 
     BottomNavigationView bottomNavigation;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +34,8 @@ public class MainActivity extends AppCompatActivity implements OnTabItemSelected
 
         bottomNavigation = findViewById(R.id.bottom_navigation);
         bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
@@ -42,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements OnTabItemSelected
                     case R.id.tab2:
                         Toast.makeText(getApplicationContext(), "두 번째 탭 선택됨", Toast.LENGTH_LONG).show();
                         getSupportFragmentManager().beginTransaction()
-                                .replace(R.id.container, userInformation).commit();
+                                .replace(R.id.container, matchingList).commit();
 
                         return true;
                     case R.id.tab3:
@@ -56,6 +62,7 @@ public class MainActivity extends AppCompatActivity implements OnTabItemSelected
                 return false;
             }
         });
+
 
     }
 
