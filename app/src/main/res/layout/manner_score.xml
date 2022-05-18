@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
     <!--타이틀-->
     <TextView
@@ -19,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-   <!--평가할 프로필들이 나열되는 레이아웃-->
+    <!--평가할 프로필들이 나열되는 레이아웃-->
     <LinearLayout
         android:id="@+id/profile_list"
         android:layout_height="wrap_content"
@@ -31,13 +31,15 @@
         android:orientation="vertical">
 
         <!--프로필 레이아웃-->
+        <!--1번 프로필-->
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/profile_1"
+            android:id="@+id/profile1"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:padding="10sp">
+            android:padding="10sp"
+            android:visibility="visible">
             <ImageView
-                android:id="@+id/profile_1_pic"
+                android:id="@+id/profile1_pic"
                 android:src="@drawable/ic_launcher_background"
                 android:layout_height="60sp"
                 android:layout_width="60sp"
@@ -45,43 +47,285 @@
                 app:layout_constraintLeft_toLeftOf="parent"/>
 
             <TextView
-                android:id="@+id/profile_1_name"
+                android:id="@+id/profile1_name"
                 android:layout_height="20sp"
                 android:layout_width="60sp"
                 android:layout_marginTop="5sp"
                 android:text="이름"
                 android:textSize="12sp"
                 android:textAlignment="center"
-                app:layout_constraintTop_toBottomOf="@id/profile_1_pic"
+                app:layout_constraintTop_toBottomOf="@id/profile1_pic"
                 app:layout_constraintLeft_toLeftOf="parent" />
 
-            <RatingBar
-                android:id="@+id/profile_1_Rate"
+            <ImageView
+                android:src="@drawable/bad_emoji"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_marginStart="20sp"
+                app:layout_constraintBottom_toTopOf="@id/profile1_RG"
+                app:layout_constraintStart_toEndOf="@id/profile1_pic"/>
+            <ImageView
+                android:src="@drawable/good_emoji"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_marginStart="70sp"
+                app:layout_constraintBottom_toTopOf="@id/profile1_RG"
+                app:layout_constraintLeft_toRightOf="@id/profile1_pic"/>
+            <ImageView
+                android:src="@drawable/better_emoji"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_marginStart="120sp"
+                app:layout_constraintBottom_toTopOf="@id/profile1_RG"
+                app:layout_constraintLeft_toRightOf="@id/profile1_pic"/>
+
+            <RadioGroup
+                android:id="@+id/profile1_RG"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10sp"
-                android:isIndicator="false"
-                android:max="5"
-                android:numStars="5"
-                android:rating="0"
-                android:stepSize="1"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toRightOf="@id/profile_1_pic"
-                app:layout_constraintTop_toTopOf="parent">
-            </RatingBar>
+                app:layout_constraintLeft_toRightOf="@id/profile1_pic"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:layout_margin="10sp"
+                    android:id="@+id/profile1_bad"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"/>
+                <RadioButton
+                    android:layout_margin="10sp"
+                    android:id="@+id/profile1_good"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"/>
+                <RadioButton
+                    android:layout_margin="10sp"
+                    android:id="@+id/profile1_better"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"/>
+            </RadioGroup>
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </LinearLayout>
+        <!--2번 프로필-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile2"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:padding="10sp"
+            android:visibility="visible">
+            <ImageView
+                android:id="@+id/profile2_pic"
+                android:src="@drawable/ic_launcher_background"
+                android:layout_height="60sp"
+                android:layout_width="60sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
 
-    <!--평가 저장 버튼-->
-    <Button
-        android:id="@+id/manner_confirm"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_marginTop="20sp"
-        android:textSize="20sp"
-        android:text="@string/save"
-        app:layout_constraintTop_toBottomOf="@id/profile_list"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+            <TextView
+                android:id="@+id/profile2_name"
+                android:layout_height="20sp"
+                android:layout_width="60sp"
+                android:layout_marginTop="5sp"
+                android:text="이름"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                app:layout_constraintTop_toBottomOf="@id/profile2_pic"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <ImageView
+                android:src="@drawable/bad_emoji"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_marginStart="20sp"
+                app:layout_constraintBottom_toTopOf="@id/profile2_RG"
+                app:layout_constraintStart_toEndOf="@id/profile2_pic"/>
+            <ImageView
+                android:src="@drawable/good_emoji"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_marginStart="70sp"
+                app:layout_constraintBottom_toTopOf="@id/profile2_RG"
+                app:layout_constraintLeft_toRightOf="@id/profile2_pic"/>
+            <ImageView
+                android:src="@drawable/better_emoji"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_marginStart="120sp"
+                app:layout_constraintBottom_toTopOf="@id/profile2_RG"
+                app:layout_constraintLeft_toRightOf="@id/profile2_pic"/>
+
+            <RadioGroup
+                android:id="@+id/profile2_RG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/profile2_pic"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:layout_margin="10sp"
+                    android:id="@+id/profile2_bad"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"/>
+                <RadioButton
+                    android:layout_margin="10sp"
+                    android:id="@+id/profile2_good"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"/>
+                <RadioButton
+                    android:layout_margin="10sp"
+                    android:id="@+id/profile2_better"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"/>
+            </RadioGroup>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--3번 프로필-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile3"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:padding="10sp"
+            android:visibility="visible">
+            <ImageView
+                android:id="@+id/profile3_pic"
+                android:src="@drawable/ic_launcher_background"
+                android:layout_height="60sp"
+                android:layout_width="60sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                android:id="@+id/profile3_name"
+                android:layout_height="20sp"
+                android:layout_width="60sp"
+                android:layout_marginTop="5sp"
+                android:text="이름"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                app:layout_constraintTop_toBottomOf="@id/profile3_pic"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <ImageView
+                android:src="@drawable/bad_emoji"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_marginStart="20sp"
+                app:layout_constraintBottom_toTopOf="@id/profile3_RG"
+                app:layout_constraintStart_toEndOf="@id/profile3_pic"/>
+            <ImageView
+                android:src="@drawable/good_emoji"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_marginStart="70sp"
+                app:layout_constraintBottom_toTopOf="@id/profile3_RG"
+                app:layout_constraintLeft_toRightOf="@id/profile3_pic"/>
+            <ImageView
+                android:src="@drawable/better_emoji"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_marginStart="120sp"
+                app:layout_constraintBottom_toTopOf="@id/profile3_RG"
+                app:layout_constraintLeft_toRightOf="@id/profile3_pic"/>
+
+            <RadioGroup
+                android:id="@+id/profile3_RG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/profile3_pic"
+
+                android:orientation="horizontal">
+                <RadioButton
+                    android:layout_margin="10sp"
+                    android:id="@+id/profile3_bad"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"/>
+                <RadioButton
+                    android:layout_margin="10sp"
+                    android:id="@+id/profile3_good"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"/>
+                <RadioButton
+                    android:layout_margin="10sp"
+                    android:id="@+id/profile3_better"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"/>
+            </RadioGroup>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--4번 프로필-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile4"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:padding="10sp"
+            android:visibility="visible">
+            <ImageView
+                android:id="@+id/profile4_pic"
+                android:src="@drawable/ic_launcher_background"
+                android:layout_height="60sp"
+                android:layout_width="60sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                android:id="@+id/profile4_name"
+                android:layout_height="20sp"
+                android:layout_width="60sp"
+                android:layout_marginTop="5sp"
+                android:text="이름"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                app:layout_constraintTop_toBottomOf="@id/profile4_pic"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <ImageView
+                android:src="@drawable/bad_emoji"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_marginStart="20sp"
+                app:layout_constraintBottom_toTopOf="@id/profile4_RG"
+                app:layout_constraintStart_toEndOf="@id/profile4_pic"/>
+            <ImageView
+                android:src="@drawable/good_emoji"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_marginStart="70sp"
+                app:layout_constraintBottom_toTopOf="@id/profile4_RG"
+                app:layout_constraintLeft_toRightOf="@id/profile4_pic"/>
+            <ImageView
+                android:src="@drawable/better_emoji"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_marginStart="120sp"
+                app:layout_constraintBottom_toTopOf="@id/profile4_RG"
+                app:layout_constraintLeft_toRightOf="@id/profile4_pic"/>
+
+            <RadioGroup
+                android:id="@+id/profile4_RG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/profile4_pic"
+
+                android:orientation="horizontal">
+                <RadioButton
+                    android:layout_margin="10sp"
+                    android:id="@+id/profile4_bad"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"/>
+                <RadioButton
+                    android:layout_margin="10sp"
+                    android:id="@+id/profile4_good"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"/>
+                <RadioButton
+                    android:layout_margin="10sp"
+                    android:id="@+id/profile4_better"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"/>
+            </RadioGroup>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

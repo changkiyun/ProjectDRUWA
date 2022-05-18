@@ -1,67 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <!--유저 이미지, 사진버튼, 텍스트뷰-->
-    <ImageView
-        android:id="@+id/userImg"
-        android:layout_width="80sp"
-        android:layout_height="80sp"
-        android:layout_marginTop="20sp"
-        android:layout_marginLeft="20sp"
-        android:src="@drawable/user"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/addPhoto"
-        android:layout_width="80sp"
-        android:layout_height="80sp"
-        android:layout_marginTop="20sp"
-        android:layout_marginLeft="20sp"
-        android:src="@drawable/camera"
-        app:layout_constraintLeft_toRightOf="@id/userImg"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
+    <ScrollView
+        android:id="@+id/scroll_F"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="원하시는 사진을\n 추가해 주세요."
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/addPhoto"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/addPhoto"
-        app:layout_constraintTop_toTopOf="@+id/addPhoto" />
-
-    <!--에딧 텍스트 방제목 입력칸-->
-    <EditText
-        android:id="@+id/createRoomName"
-        android:layout_width="350sp"
-        android:layout_height="40sp"
-        android:hint="방 제목을 입력해 주세요"
-        android:layout_marginTop="50sp"
-        android:layout_marginBottom="0sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userImg" />
-
-    <!--최대인원~장소까지 묶인 스크롤뷰-->
-    <ScrollView
-        android:id="@+id/scroll"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createRoomName">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TableLayout
-            android:id="@+id/gridView"
+            android:id="@+id/gridView_F"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:stretchColumns="0"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -74,13 +28,13 @@
                 android:layout_marginBottom="5sp">
 
                 <TextView
-                    android:id="@+id/tv1"
+                    android:id="@+id/tv1_F"
                     android:layout_gravity="center_vertical"
                     android:text="최대인원"
                     android:textSize="20sp" />
 
                 <Spinner
-                    android:id="@+id/spinner_field_MaxCount"
+                    android:id="@+id/spinner_field_MaxCount_F"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:spinnerMode="dropdown"
@@ -92,13 +46,13 @@
                 android:layout_marginBottom="5sp">
 
                 <TextView
-                    android:id="@+id/tv2"
+                    android:id="@+id/tv2_F"
                     android:layout_gravity="center_vertical"
                     android:text="타수"
                     android:textSize="20sp" />
 
                 <Spinner
-                    android:id="@+id/spinner_field_HitCount"
+                    android:id="@+id/spinner_field_HitCount_F"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:spinnerMode="dropdown"
@@ -110,13 +64,13 @@
                 android:layout_marginBottom="5sp">
 
                 <TextView
-                    android:id="@+id/tv3"
+                    android:id="@+id/tv3_F"
                     android:layout_gravity="center_vertical"
                     android:text="성별"
                     android:textSize="20sp" />
 
                 <Spinner
-                    android:id="@+id/spinner_field_Sex"
+                    android:id="@+id/spinner_field_Sex_F"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:spinnerMode="dropdown"
@@ -128,13 +82,13 @@
                 android:layout_marginBottom="5sp">
 
                 <TextView
-                    android:id="@+id/tv4"
+                    android:id="@+id/tv4_F"
                     android:layout_gravity="center_vertical"
                     android:text="최대인원"
                     android:textSize="20sp" />
 
                 <Spinner
-                    android:id="@+id/spinner_field_Age"
+                    android:id="@+id/spinner_field_Age_F"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:spinnerMode="dropdown"
@@ -146,13 +100,13 @@
                 android:layout_marginBottom="5sp">
 
                 <TextView
-                    android:id="@+id/tv5"
+                    android:id="@+id/tv5_F"
                     android:layout_gravity="center_vertical"
                     android:text="장소"
                     android:textSize="20sp" />
 
                 <Spinner
-                    android:id="@+id/spinner_field_Place"
+                    android:id="@+id/spinner_field_Place_F"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:spinnerMode="dropdown"
@@ -163,16 +117,26 @@
 
     </ScrollView>
 
-    <!--라운딩 개설 버튼-->
     <Button
-        android:id="@+id/createRoom"
-        android:layout_width="200sp"
+        android:id="@+id/applyFiltering"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="#466BEF"
-        android:text="라운딩 개설"
-        android:textSize="20sp"
-        android:layout_marginBottom="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:text="적용"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scroll_F" />
+
+    <Button
+        android:id="@+id/cancelFiltering"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="취소"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toEndOf="@+id/applyFiltering"
+        app:layout_constraintTop_toBottomOf="@+id/scroll_F" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

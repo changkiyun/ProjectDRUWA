@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+//user_information Fragment 처리 YCK
 public class UserInformation extends Fragment {
 
 
