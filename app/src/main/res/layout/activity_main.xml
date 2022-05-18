@@ -17,11 +17,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
-        <ImageButton
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
     </FrameLayout>
 
     <!--안드로이드 메인에 계속 떠있을 버튼-->
@@ -33,6 +28,19 @@
         android:textSize="30dp"
         android:textAlignment="center"
         android:layout_marginBottom="90sp"
+        android:layout_marginRight="30sp"
+        android:background="@drawable/button_circle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <!--안드로이드 메인에 계속 떠있을 버튼-->
+    <Button
+        android:id="@+id/TestBut"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="+"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:layout_marginBottom="150sp"
         android:layout_marginRight="30sp"
         android:background="@drawable/button_circle"
         app:layout_constraintBottom_toBottomOf="parent"
