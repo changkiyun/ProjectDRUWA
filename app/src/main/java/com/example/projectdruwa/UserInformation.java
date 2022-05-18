@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-//UserInformation Fragment 처리 YCK
+//user_information Fragment 처리 YCK
 public class UserInformation extends Fragment {
     @Nullable
     @Override
