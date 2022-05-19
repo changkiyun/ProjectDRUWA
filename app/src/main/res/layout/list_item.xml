@@ -2,16 +2,19 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="130sp"
     android:layout_marginTop="8sp"
     android:layout_marginLeft="4sp"
     android:layout_marginRight="4sp"
     android:layout_marginBottom="4sp"
     app:cardBackgroundColor="#ffffff"
     app:cardCornerRadius="10sp"
-    app:cardElevation="5sp">
+    app:cardElevation="5sp"
+
+    >
 
     <LinearLayout
+        android:layout_gravity="center_vertical"
         android:id="@+id/matchListlayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,8 +23,8 @@
 
         <ImageView
             android:id="@+id/profileImageView"
-            android:layout_width="82sp"
-            android:layout_height="86sp"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
             android:layout_gravity="center_vertical"
             android:padding="5sp"
             app:srcCompat="@drawable/lion_sample" />
