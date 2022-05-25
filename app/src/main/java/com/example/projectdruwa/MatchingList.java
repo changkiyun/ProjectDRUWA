@@ -4,16 +4,19 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.Constraints;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -89,7 +92,6 @@ public class MatchingList extends Fragment {
 
         //CJW : 상단 햄버거 버튼 클릭시 다이얼로그 창 필터링열기
         filterDialog= new Dialog(getContext());
-        filterDialog.requestWindowFeature(Window.FEATURE_NO_TITLE); // 타이틀 제거
         filterDialog.setContentView(R.layout.filtering);             // xml 레이아웃 파일과 연결
 
         ImageButton filtering = rootView.findViewById(R.id.button2);
@@ -97,6 +99,11 @@ public class MatchingList extends Fragment {
             @Override
             public void onClick(View view) {
                 filterDialogShow(); // 다이얼로그 띄우기
+                //CJW : 주변 반투명 없애기, 상단 위치조정
+                filterDialog.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
+                filterDialog.getWindow().setGravity(Gravity.TOP);
+
+
             }
         });
 
