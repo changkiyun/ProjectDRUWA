@@ -40,7 +40,7 @@
             android:visibility="visible">
             <ImageView
                 android:id="@+id/profile1_pic"
-                android:src="@drawable/ic_launcher_background"
+                android:src="@drawable/lion2"
                 android:layout_height="60sp"
                 android:layout_width="60sp"
                 app:layout_constraintTop_toTopOf="parent"
@@ -113,7 +113,7 @@
             android:visibility="visible">
             <ImageView
                 android:id="@+id/profile2_pic"
-                android:src="@drawable/ic_launcher_background"
+                android:src="@drawable/lion2"
                 android:layout_height="60sp"
                 android:layout_width="60sp"
                 app:layout_constraintTop_toTopOf="parent"
@@ -186,7 +186,7 @@
             android:visibility="visible">
             <ImageView
                 android:id="@+id/profile3_pic"
-                android:src="@drawable/ic_launcher_background"
+                android:src="@drawable/lion2"
                 android:layout_height="60sp"
                 android:layout_width="60sp"
                 app:layout_constraintTop_toTopOf="parent"
@@ -260,7 +260,7 @@
             android:visibility="visible">
             <ImageView
                 android:id="@+id/profile4_pic"
-                android:src="@drawable/ic_launcher_background"
+                android:src="@drawable/lion2"
                 android:layout_height="60sp"
                 android:layout_width="60sp"
                 app:layout_constraintTop_toTopOf="parent"
