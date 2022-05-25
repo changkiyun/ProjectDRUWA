@@ -41,6 +41,7 @@ public class UserInformation extends Fragment {
                     startActivity(intent);
                 }
                 });
+
         }
     }
 
