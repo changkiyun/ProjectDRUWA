@@ -17,6 +17,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.Constraints;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -27,6 +28,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 public class MatchingList extends Fragment {
     RecyclerView matchList;
     MatchListAdapter adapter;
+    View search;
 
     Context context;
     OnTapItemSelectedListener listener;
@@ -85,6 +87,15 @@ public class MatchingList extends Fragment {
         adapter.setOnItemClickListener(new OnTapItemSelectedListener() {
             @Override
             public void onItemClick(MatchListAdapter.ViewHolder holder, View view, int position) {
+
+                AlertDialog.Builder dlg = new AlertDialog.Builder(getContext());
+
+                search = View.inflate(getContext(), R.layout.search_filtering_dialog,null);
+                dlg.setView(search);
+                dlg.setNegativeButton("닫기", null);
+                dlg.setPositiveButton("참여", null);
+                dlg.show();
+
                 MatchingItem item = adapter.getItem(position);
                 Toast.makeText(getContext(), position + "번째 매칭 선택됨", Toast.LENGTH_SHORT).show();
             }
