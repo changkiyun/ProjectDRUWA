@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 //user_information Fragment 처리 YCK
 public class UserInformation extends Fragment {
 
+    Button btn_edit;
 
     @Nullable
     @Override
@@ -31,5 +32,16 @@ public class UserInformation extends Fragment {
 
     private void initUI(ViewGroup rootView){
 
+
+            btn_edit = rootView.findViewById(R.id.btn_edit);
+            btn_edit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(getContext(), ProfileEdit.class);
+                    startActivity(intent);
+                }
+                });
+        }
     }
-}
+
+

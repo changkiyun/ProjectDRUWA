@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".RoundingCreate" android:label="두번째회면"/>
-
+        <activity android:name=".ProfileEdit" android:label="프로필편집" />
     </application>
 
 </manifest>
