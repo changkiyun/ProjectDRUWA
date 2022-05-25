@@ -7,4 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="grey">#ffaaaaaa</color>
+
+    <!--투명색-->
+    <color name="invis">#00ffffff</color>
+
+    <!--메인색-->
+    <color name="mainColor">#ff466BEF</color>
 </resources>
