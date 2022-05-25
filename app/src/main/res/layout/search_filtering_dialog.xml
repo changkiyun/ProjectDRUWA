@@ -12,7 +12,7 @@
         android:layout_height="85dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="28dp"
-        android:src="@drawable/ic_baseline_person_24"
+        android:src="@drawable/lion2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -20,8 +20,10 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="28dp"
         android:text="방제목: 다함께 나이스샷!"
+        android:textColor="@color/black"
         android:textSize="20dp"
         app:layout_constraintLeft_toRightOf="@id/profile"
         app:layout_constraintTop_toTopOf="parent" />
@@ -59,7 +61,7 @@
         android:layout_width="55dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:layout_marginRight="48dp"
+        android:layout_marginRight="32dp"
         android:background="@drawable/round"
         android:gravity="center"
         android:text="배움"
@@ -74,8 +76,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="장소:**스크린골프"
-        android:textColor="@color/teal_200"
         android:textSize="17dp"
+
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -88,7 +90,6 @@
         android:layout_marginTop="20dp"
         android:text="일정: 04월 28일 17시 30분"
         android:textSize="17dp"
-        android:textColor="@color/teal_200"
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -101,7 +102,6 @@
         android:layout_marginTop="20dp"
         android:text="연령: 20~30"
         android:textSize="17dp"
-        android:textColor="@color/teal_200"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/date" />
@@ -113,7 +113,6 @@
         android:layout_marginTop="20dp"
         android:text="타수: 100"
         android:textSize="17dp"
-        android:textColor="@color/teal_200"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/age" />
@@ -125,7 +124,6 @@
         android:layout_marginTop="20dp"
         android:text="모집인원: 4명"
         android:textSize="17dp"
-        android:textColor="@color/teal_200"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cl" />
