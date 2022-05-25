@@ -13,5 +13,6 @@
     <color name="invis">#00ffffff</color>
 
     <!--메인색-->
-    <color name="mainColor">#ff466BEF</color>
+    <color name="Ex_mainColor">#ff466BEF</color>
+    <color name="mainColor">@color/teal_200</color>
 </resources>
