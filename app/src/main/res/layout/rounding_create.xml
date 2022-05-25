@@ -14,7 +14,7 @@
         android:id="@+id/userImg"
         android:layout_width="100sp"
         android:layout_height="100sp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="84dp"
         android:src="@drawable/lion2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
