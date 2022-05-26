@@ -39,6 +39,7 @@ public class MatchListAdapter extends RecyclerView.Adapter<MatchListAdapter.View
     public int getItemCount() {
         return items.size();
     }
+
     public void addItem(MatchingItem item){
         items.add(item);
     }

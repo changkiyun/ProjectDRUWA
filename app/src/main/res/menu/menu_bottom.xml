@@ -8,17 +8,17 @@
         android:enabled="true"
         android:icon="@drawable/home_test"
         android:iconTint="#2E8379"
-        android:title="home"/>
+        android:title="홈"/>
     <item
         android:id="@+id/tab2"
         app:showAsAction="ifRoom"
         android:enabled="true"
         android:icon="@drawable/message_test"
-        android:title="message"/>
+        android:title="채팅"/>
     <item
         android:id="@+id/tab3"
         app:showAsAction="ifRoom"
         android:enabled="true"
         android:icon="@drawable/people_test"
-        android:title="friend"/>
+        android:title="내 정보"/>
 </menu>
