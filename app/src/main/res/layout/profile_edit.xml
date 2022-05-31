@@ -11,12 +11,10 @@
         android:id="@+id/user_info_linear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="20sp"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.406"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
 
         <TextView
             android:id="@+id/textView"
@@ -24,7 +22,6 @@
             android:layout_height="45dp"
             android:layout_marginLeft="20sp"
             android:text="소개 :"
-            android:textColor="@color/black"
             android:textSize="30dp" />
 
         <EditText
@@ -32,20 +29,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="즐거운 라운딩!"
             android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:text="즐거운 라운딩!" />
+            android:minHeight="48dp" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="52sp"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.406"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/imageView3">
 
         <TextView
@@ -54,7 +49,6 @@
             android:layout_height="45dp"
             android:layout_marginLeft="20sp"
             android:text="이름 :"
-            android:textColor="@color/black"
             android:textSize="30dp" />
 
         <EditText
@@ -62,20 +56,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="Name"
             android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:text="Name" />
+            android:minHeight="48dp" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="20sp"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.406"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <TextView
@@ -84,7 +77,6 @@
             android:layout_height="45dp"
             android:layout_marginLeft="20sp"
             android:text="나이 :"
-            android:textColor="@color/black"
             android:textSize="30dp" />
 
         <EditText
@@ -92,20 +84,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="나이를 입려하세요."
             android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:text="나이를 입려하세요." />
+            android:minHeight="48dp" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="20sp"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.406"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
         <TextView
@@ -114,7 +105,6 @@
             android:layout_height="45dp"
             android:layout_marginLeft="20sp"
             android:text="인증 :"
-            android:textColor="@color/black"
             android:textSize="30dp" />
 
         <EditText
@@ -122,9 +112,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="동네를 인증하세요."
             android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:text="동내를 인증하세요." />
+            android:minHeight="48dp" />
     </LinearLayout>
 
 
@@ -132,11 +122,9 @@
         android:id="@+id/linearLayout3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20sp"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.192"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout11">
 
         <TextView
@@ -145,17 +133,15 @@
             android:layout_height="45dp"
             android:layout_marginLeft="20sp"
             android:text="성별 :"
-            android:textColor="@color/black"
             android:textSize="30dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Spinner
             android:id="@+id/spinner_field_MaxCount3"
-            android:layout_width="103dp"
-            android:layout_height="48dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:spinnerMode="dropdown"
-            android:textColor="@color/black"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="SpeakableTextPresentCheck"
             tools:layout_editor_absoluteX="254dp" />
@@ -167,11 +153,9 @@
         android:id="@+id/linearLayout7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="20sp"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.192"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
         <TextView
@@ -180,17 +164,15 @@
             android:layout_height="45dp"
             android:layout_marginLeft="20sp"
             android:text="타수 :"
-            android:textColor="@color/black"
             android:textSize="30dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Spinner
             android:id="@+id/spinner_field_MaxCount10"
-            android:layout_width="103dp"
-            android:layout_height="48dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:spinnerMode="dropdown"
-            android:textColor="@color/black"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="SpeakableTextPresentCheck"
             tools:layout_editor_absoluteX="254dp" />
@@ -200,8 +182,8 @@
 
     <Button
         android:id="@+id/button7"
-        android:layout_width="378dp"
-        android:layout_height="56dp"
+        android:layout_width="360sp"
+        android:layout_height="50sp"
         android:backgroundTint= "@color/teal_200"
         android:text="완료"
         android:textColor="@color/white"
@@ -226,8 +208,8 @@
         android:id="@+id/roundingCreateButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
-        android:layout_marginEnd="116dp"
+        android:layout_marginTop="124sp"
+        android:layout_marginEnd="116sp"
         android:backgroundTint="@color/teal_200"
         android:contentDescription="NewProject"
         android:src="@drawable/add_white_50"
@@ -236,13 +218,20 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="146dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="36dp"
+        android:layout_width="146sp"
+        android:layout_height="120sp"
+        android:layout_marginTop="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/lion_sample" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="39dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
