@@ -56,52 +56,36 @@
                 android:textAlignment="center"
                 app:layout_constraintTop_toBottomOf="@id/profile1_pic"
                 app:layout_constraintLeft_toLeftOf="parent" />
-
-            <ImageView
-                android:src="@drawable/bad_emoji"
-                android:layout_width="30sp"
-                android:layout_height="30sp"
-                android:layout_marginStart="20sp"
-                app:layout_constraintBottom_toTopOf="@id/profile1_RG"
-                app:layout_constraintStart_toEndOf="@id/profile1_pic"/>
-            <ImageView
-                android:src="@drawable/good_emoji"
-                android:layout_width="30sp"
-                android:layout_height="30sp"
-                android:layout_marginStart="70sp"
-                app:layout_constraintBottom_toTopOf="@id/profile1_RG"
-                app:layout_constraintLeft_toRightOf="@id/profile1_pic"/>
-            <ImageView
-                android:src="@drawable/better_emoji"
-                android:layout_width="30sp"
-                android:layout_height="30sp"
-                android:layout_marginStart="120sp"
-                app:layout_constraintBottom_toTopOf="@id/profile1_RG"
-                app:layout_constraintLeft_toRightOf="@id/profile1_pic"/>
-
             <RadioGroup
                 android:id="@+id/profile1_RG"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10sp"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toRightOf="@id/profile1_pic"
                 android:orientation="horizontal">
                 <RadioButton
                     android:layout_margin="10sp"
                     android:id="@+id/profile1_bad"
                     android:layout_width="30sp"
-                    android:layout_height="30sp"/>
+                    android:layout_height="30sp"
+                    android:background="@drawable/selector_radio_bad"
+                    android:button="@null"/>
                 <RadioButton
                     android:layout_margin="10sp"
                     android:id="@+id/profile1_good"
                     android:layout_width="30sp"
-                    android:layout_height="30sp"/>
+                    android:layout_height="30sp"
+                    android:background="@drawable/selector_radio_good"
+                    android:button="@null"/>
                 <RadioButton
                     android:layout_margin="10sp"
                     android:id="@+id/profile1_better"
                     android:layout_width="30sp"
-                    android:layout_height="30sp"/>
+                    android:layout_height="30sp"
+                    android:background="@drawable/selector_radio_better"
+                    android:button="@null"/>
             </RadioGroup>
         </androidx.constraintlayout.widget.ConstraintLayout>
         <!--2번 프로필-->
@@ -130,51 +114,36 @@
                 app:layout_constraintTop_toBottomOf="@id/profile2_pic"
                 app:layout_constraintLeft_toLeftOf="parent" />
 
-            <ImageView
-                android:src="@drawable/bad_emoji"
-                android:layout_width="30sp"
-                android:layout_height="30sp"
-                android:layout_marginStart="20sp"
-                app:layout_constraintBottom_toTopOf="@id/profile2_RG"
-                app:layout_constraintStart_toEndOf="@id/profile2_pic"/>
-            <ImageView
-                android:src="@drawable/good_emoji"
-                android:layout_width="30sp"
-                android:layout_height="30sp"
-                android:layout_marginStart="70sp"
-                app:layout_constraintBottom_toTopOf="@id/profile2_RG"
-                app:layout_constraintLeft_toRightOf="@id/profile2_pic"/>
-            <ImageView
-                android:src="@drawable/better_emoji"
-                android:layout_width="30sp"
-                android:layout_height="30sp"
-                android:layout_marginStart="120sp"
-                app:layout_constraintBottom_toTopOf="@id/profile2_RG"
-                app:layout_constraintLeft_toRightOf="@id/profile2_pic"/>
-
             <RadioGroup
                 android:id="@+id/profile2_RG"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10sp"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toRightOf="@id/profile2_pic"
                 android:orientation="horizontal">
                 <RadioButton
                     android:layout_margin="10sp"
                     android:id="@+id/profile2_bad"
                     android:layout_width="30sp"
-                    android:layout_height="30sp"/>
+                    android:layout_height="30sp"
+                    android:background="@drawable/selector_radio_bad"
+                    android:button="@null"/>
                 <RadioButton
                     android:layout_margin="10sp"
                     android:id="@+id/profile2_good"
                     android:layout_width="30sp"
-                    android:layout_height="30sp"/>
+                    android:layout_height="30sp"
+                    android:background="@drawable/selector_radio_good"
+                    android:button="@null"/>
                 <RadioButton
                     android:layout_margin="10sp"
                     android:id="@+id/profile2_better"
                     android:layout_width="30sp"
-                    android:layout_height="30sp"/>
+                    android:layout_height="30sp"
+                    android:background="@drawable/selector_radio_better"
+                    android:button="@null"/>
             </RadioGroup>
         </androidx.constraintlayout.widget.ConstraintLayout>
         <!--3번 프로필-->
@@ -203,34 +172,13 @@
                 app:layout_constraintTop_toBottomOf="@id/profile3_pic"
                 app:layout_constraintLeft_toLeftOf="parent" />
 
-            <ImageView
-                android:src="@drawable/bad_emoji"
-                android:layout_width="30sp"
-                android:layout_height="30sp"
-                android:layout_marginStart="20sp"
-                app:layout_constraintBottom_toTopOf="@id/profile3_RG"
-                app:layout_constraintStart_toEndOf="@id/profile3_pic"/>
-            <ImageView
-                android:src="@drawable/good_emoji"
-                android:layout_width="30sp"
-                android:layout_height="30sp"
-                android:layout_marginStart="70sp"
-                app:layout_constraintBottom_toTopOf="@id/profile3_RG"
-                app:layout_constraintLeft_toRightOf="@id/profile3_pic"/>
-            <ImageView
-                android:src="@drawable/better_emoji"
-                android:layout_width="30sp"
-                android:layout_height="30sp"
-                android:layout_marginStart="120sp"
-                app:layout_constraintBottom_toTopOf="@id/profile3_RG"
-                app:layout_constraintLeft_toRightOf="@id/profile3_pic"/>
-
             <RadioGroup
                 android:id="@+id/profile3_RG"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10sp"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toRightOf="@id/profile3_pic"
 
                 android:orientation="horizontal">
@@ -238,17 +186,23 @@
                     android:layout_margin="10sp"
                     android:id="@+id/profile3_bad"
                     android:layout_width="30sp"
-                    android:layout_height="30sp"/>
+                    android:layout_height="30sp"
+                    android:background="@drawable/selector_radio_bad"
+                    android:button="@null"/>
                 <RadioButton
                     android:layout_margin="10sp"
                     android:id="@+id/profile3_good"
                     android:layout_width="30sp"
-                    android:layout_height="30sp"/>
+                    android:layout_height="30sp"
+                    android:background="@drawable/selector_radio_good"
+                    android:button="@null"/>
                 <RadioButton
                     android:layout_margin="10sp"
                     android:id="@+id/profile3_better"
                     android:layout_width="30sp"
-                    android:layout_height="30sp"/>
+                    android:layout_height="30sp"
+                    android:background="@drawable/selector_radio_better"
+                    android:button="@null"/>
             </RadioGroup>
         </androidx.constraintlayout.widget.ConstraintLayout>
         <!--4번 프로필-->
@@ -277,34 +231,13 @@
                 app:layout_constraintTop_toBottomOf="@id/profile4_pic"
                 app:layout_constraintLeft_toLeftOf="parent" />
 
-            <ImageView
-                android:src="@drawable/bad_emoji"
-                android:layout_width="30sp"
-                android:layout_height="30sp"
-                android:layout_marginStart="20sp"
-                app:layout_constraintBottom_toTopOf="@id/profile4_RG"
-                app:layout_constraintStart_toEndOf="@id/profile4_pic"/>
-            <ImageView
-                android:src="@drawable/good_emoji"
-                android:layout_width="30sp"
-                android:layout_height="30sp"
-                android:layout_marginStart="70sp"
-                app:layout_constraintBottom_toTopOf="@id/profile4_RG"
-                app:layout_constraintLeft_toRightOf="@id/profile4_pic"/>
-            <ImageView
-                android:src="@drawable/better_emoji"
-                android:layout_width="30sp"
-                android:layout_height="30sp"
-                android:layout_marginStart="120sp"
-                app:layout_constraintBottom_toTopOf="@id/profile4_RG"
-                app:layout_constraintLeft_toRightOf="@id/profile4_pic"/>
-
             <RadioGroup
                 android:id="@+id/profile4_RG"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10sp"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toRightOf="@id/profile4_pic"
 
                 android:orientation="horizontal">
@@ -312,17 +245,23 @@
                     android:layout_margin="10sp"
                     android:id="@+id/profile4_bad"
                     android:layout_width="30sp"
-                    android:layout_height="30sp"/>
+                    android:layout_height="30sp"
+                    android:background="@drawable/selector_radio_bad"
+                    android:button="@null"/>
                 <RadioButton
                     android:layout_margin="10sp"
                     android:id="@+id/profile4_good"
                     android:layout_width="30sp"
-                    android:layout_height="30sp"/>
+                    android:layout_height="30sp"
+                    android:background="@drawable/selector_radio_good"
+                    android:button="@null"/>
                 <RadioButton
                     android:layout_margin="10sp"
                     android:id="@+id/profile4_better"
                     android:layout_width="30sp"
-                    android:layout_height="30sp"/>
+                    android:layout_height="30sp"
+                    android:background="@drawable/selector_radio_better"
+                    android:button="@null"/>
             </RadioGroup>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
