@@ -7,37 +7,33 @@
     tools:context=".MainActivity">
 
     <!--유저 이미지, 사진버튼, 텍스트뷰-->
-    <ImageView
-        android:id="@+id/userImg"
-        android:layout_width="80sp"
-        android:layout_height="80sp"
-        android:layout_marginTop="20sp"
-        android:layout_marginLeft="20sp"
-        android:src="@drawable/user"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/addPhoto"
-        android:layout_width="80sp"
-        android:layout_height="80sp"
-        android:layout_marginTop="20sp"
-        android:layout_marginLeft="20sp"
-        android:src="@drawable/camera"
-        app:layout_constraintLeft_toRightOf="@id/userImg"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!--에딧 텍스트 방제목 입력칸-->
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="원하시는 사진을\n 추가해 주세요."
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/addPhoto"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/addPhoto"
-        app:layout_constraintTop_toTopOf="@+id/addPhoto" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:text="라운딩 등록"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!--에딧 텍스트 방제목 입력칸-->
+    <ImageView
+        android:id="@+id/userImg"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:layout_marginTop="84dp"
+        android:src="@drawable/lion2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/createRoomName"
         android:layout_width="350sp"
@@ -50,11 +46,15 @@
         app:layout_constraintTop_toBottomOf="@+id/userImg" />
 
     <!--최대인원~장소까지 묶인 스크롤뷰-->
+
+    <!--라운딩 개설 버튼-->
+
     <ScrollView
         android:id="@+id/scroll"
-        android:layout_width="match_parent"
+        android:layout_width="350sp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30sp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/createRoomName">
 
@@ -163,16 +163,17 @@
 
     </ScrollView>
 
-    <!--라운딩 개설 버튼-->
     <Button
         android:id="@+id/createRoom"
         android:layout_width="200sp"
         android:layout_height="wrap_content"
-        android:backgroundTint="#466BEF"
+        android:layout_marginBottom="96dp"
+        android:backgroundTint="@color/teal_200"
         android:text="라운딩 개설"
+        android:textColor="@color/white"
         android:textSize="20sp"
-        android:layout_marginBottom="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

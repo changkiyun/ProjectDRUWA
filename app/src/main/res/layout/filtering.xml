@@ -3,18 +3,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/round">
+    android:layout_height="match_parent">
 
 
-    <ScrollView
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:text="검색 필터"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginTop="20sp"
+        android:background="@drawable/round"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
         android:id="@+id/scroll_F"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <TableLayout
             android:id="@+id/gridView_F"
@@ -119,15 +132,19 @@
 
         </TableLayout>
 
-    </ScrollView>
+    </LinearLayout>
 
     <Button
         android:id="@+id/applyFiltering"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30sp"
-        android:layout_marginRight="30sp"
+        android:layout_marginRight="20sp"
+        android:layout_marginBottom="20sp"
+        android:backgroundTint="@color/teal_200"
         android:text="적용"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toBottomOf="@+id/scroll_F" />
 
@@ -135,9 +152,14 @@
         android:id="@+id/cancelFiltering"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
         android:layout_marginTop="30sp"
-        android:layout_marginLeft="30sp"
+        android:layout_marginBottom="20sp"
+        android:backgroundTint="@color/teal_200"
         android:text="취소"
+        android:textColor="@color/white"
+
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toBottomOf="@+id/scroll_F" />
 
@@ -146,7 +168,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="205dp" />
+        app:layout_constraintGuide_percent="0.5" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
