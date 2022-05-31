@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
+    //aa
     //Fragment 전환 코드 YCK
     public void onTabSelected(int position) {
         if (position == 0) {
