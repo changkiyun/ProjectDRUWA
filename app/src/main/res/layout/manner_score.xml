@@ -68,22 +68,22 @@
                 <RadioButton
                     android:layout_margin="10sp"
                     android:id="@+id/profile1_bad"
-                    android:layout_width="30sp"
-                    android:layout_height="30sp"
+                    android:layout_width="36sp"
+                    android:layout_height="51sp"
                     android:background="@drawable/selector_radio_bad"
                     android:button="@null"/>
                 <RadioButton
                     android:layout_margin="10sp"
                     android:id="@+id/profile1_good"
-                    android:layout_width="30sp"
-                    android:layout_height="30sp"
+                    android:layout_width="36sp"
+                    android:layout_height="51sp"
                     android:background="@drawable/selector_radio_good"
                     android:button="@null"/>
                 <RadioButton
                     android:layout_margin="10sp"
                     android:id="@+id/profile1_better"
-                    android:layout_width="30sp"
-                    android:layout_height="30sp"
+                    android:layout_width="36sp"
+                    android:layout_height="51sp"
                     android:background="@drawable/selector_radio_better"
                     android:button="@null"/>
             </RadioGroup>
@@ -126,22 +126,22 @@
                 <RadioButton
                     android:layout_margin="10sp"
                     android:id="@+id/profile2_bad"
-                    android:layout_width="30sp"
-                    android:layout_height="30sp"
+                    android:layout_width="36sp"
+                    android:layout_height="51sp"
                     android:background="@drawable/selector_radio_bad"
                     android:button="@null"/>
                 <RadioButton
                     android:layout_margin="10sp"
                     android:id="@+id/profile2_good"
-                    android:layout_width="30sp"
-                    android:layout_height="30sp"
+                    android:layout_width="36sp"
+                    android:layout_height="51sp"
                     android:background="@drawable/selector_radio_good"
                     android:button="@null"/>
                 <RadioButton
                     android:layout_margin="10sp"
                     android:id="@+id/profile2_better"
-                    android:layout_width="30sp"
-                    android:layout_height="30sp"
+                    android:layout_width="36sp"
+                    android:layout_height="51sp"
                     android:background="@drawable/selector_radio_better"
                     android:button="@null"/>
             </RadioGroup>
@@ -185,22 +185,22 @@
                 <RadioButton
                     android:layout_margin="10sp"
                     android:id="@+id/profile3_bad"
-                    android:layout_width="30sp"
-                    android:layout_height="30sp"
+                    android:layout_width="36sp"
+                    android:layout_height="51sp"
                     android:background="@drawable/selector_radio_bad"
                     android:button="@null"/>
                 <RadioButton
                     android:layout_margin="10sp"
                     android:id="@+id/profile3_good"
-                    android:layout_width="30sp"
-                    android:layout_height="30sp"
+                    android:layout_width="36sp"
+                    android:layout_height="51sp"
                     android:background="@drawable/selector_radio_good"
                     android:button="@null"/>
                 <RadioButton
                     android:layout_margin="10sp"
                     android:id="@+id/profile3_better"
-                    android:layout_width="30sp"
-                    android:layout_height="30sp"
+                    android:layout_width="36sp"
+                    android:layout_height="51sp"
                     android:background="@drawable/selector_radio_better"
                     android:button="@null"/>
             </RadioGroup>
@@ -244,22 +244,22 @@
                 <RadioButton
                     android:layout_margin="10sp"
                     android:id="@+id/profile4_bad"
-                    android:layout_width="30sp"
-                    android:layout_height="30sp"
+                    android:layout_width="36sp"
+                    android:layout_height="51sp"
                     android:background="@drawable/selector_radio_bad"
                     android:button="@null"/>
                 <RadioButton
                     android:layout_margin="10sp"
                     android:id="@+id/profile4_good"
-                    android:layout_width="30sp"
-                    android:layout_height="30sp"
+                    android:layout_width="36sp"
+                    android:layout_height="51sp"
                     android:background="@drawable/selector_radio_good"
                     android:button="@null"/>
                 <RadioButton
                     android:layout_margin="10sp"
                     android:id="@+id/profile4_better"
-                    android:layout_width="30sp"
-                    android:layout_height="30sp"
+                    android:layout_width="36sp"
+                    android:layout_height="51sp"
                     android:background="@drawable/selector_radio_better"
                     android:button="@null"/>
             </RadioGroup>
