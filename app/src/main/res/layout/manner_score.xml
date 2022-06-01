@@ -51,7 +51,7 @@
                 android:layout_height="20sp"
                 android:layout_width="60sp"
                 android:layout_marginTop="5sp"
-                android:text="이름임"
+                android:text="윤창기"
                 android:textSize="12sp"
                 android:textAlignment="center"
                 app:layout_constraintTop_toBottomOf="@id/profile1_pic"
@@ -66,23 +66,23 @@
                 app:layout_constraintLeft_toRightOf="@id/profile1_pic"
                 android:orientation="horizontal">
                 <RadioButton
-                    android:layout_margin="10sp"
+                    android:layout_margin="5sp"
                     android:id="@+id/profile1_bad"
-                    android:layout_width="36sp"
+                    android:layout_width="54sp"
                     android:layout_height="51sp"
                     android:background="@drawable/selector_radio_bad"
                     android:button="@null"/>
                 <RadioButton
-                    android:layout_margin="10sp"
+                    android:layout_margin="5sp"
                     android:id="@+id/profile1_good"
-                    android:layout_width="36sp"
+                    android:layout_width="54sp"
                     android:layout_height="51sp"
                     android:background="@drawable/selector_radio_good"
                     android:button="@null"/>
                 <RadioButton
-                    android:layout_margin="10sp"
+                    android:layout_margin="5sp"
                     android:id="@+id/profile1_better"
-                    android:layout_width="36sp"
+                    android:layout_width="54sp"
                     android:layout_height="51sp"
                     android:background="@drawable/selector_radio_better"
                     android:button="@null"/>
@@ -108,7 +108,7 @@
                 android:layout_height="20sp"
                 android:layout_width="60sp"
                 android:layout_marginTop="5sp"
-                android:text="이름"
+                android:text="최지웅"
                 android:textSize="12sp"
                 android:textAlignment="center"
                 app:layout_constraintTop_toBottomOf="@id/profile2_pic"
@@ -124,23 +124,23 @@
                 app:layout_constraintLeft_toRightOf="@id/profile2_pic"
                 android:orientation="horizontal">
                 <RadioButton
-                    android:layout_margin="10sp"
+                    android:layout_margin="5sp"
                     android:id="@+id/profile2_bad"
-                    android:layout_width="36sp"
+                    android:layout_width="54sp"
                     android:layout_height="51sp"
                     android:background="@drawable/selector_radio_bad"
                     android:button="@null"/>
                 <RadioButton
-                    android:layout_margin="10sp"
+                    android:layout_margin="5sp"
                     android:id="@+id/profile2_good"
-                    android:layout_width="36sp"
+                    android:layout_width="54sp"
                     android:layout_height="51sp"
                     android:background="@drawable/selector_radio_good"
                     android:button="@null"/>
                 <RadioButton
-                    android:layout_margin="10sp"
+                    android:layout_margin="5sp"
                     android:id="@+id/profile2_better"
-                    android:layout_width="36sp"
+                    android:layout_width="54sp"
                     android:layout_height="51sp"
                     android:background="@drawable/selector_radio_better"
                     android:button="@null"/>
@@ -166,7 +166,7 @@
                 android:layout_height="20sp"
                 android:layout_width="60sp"
                 android:layout_marginTop="5sp"
-                android:text="이름"
+                android:text="심재명"
                 android:textSize="12sp"
                 android:textAlignment="center"
                 app:layout_constraintTop_toBottomOf="@id/profile3_pic"
@@ -183,23 +183,23 @@
 
                 android:orientation="horizontal">
                 <RadioButton
-                    android:layout_margin="10sp"
+                    android:layout_margin="5sp"
                     android:id="@+id/profile3_bad"
-                    android:layout_width="36sp"
+                    android:layout_width="54sp"
                     android:layout_height="51sp"
                     android:background="@drawable/selector_radio_bad"
                     android:button="@null"/>
                 <RadioButton
-                    android:layout_margin="10sp"
+                    android:layout_margin="5sp"
                     android:id="@+id/profile3_good"
-                    android:layout_width="36sp"
+                    android:layout_width="54sp"
                     android:layout_height="51sp"
                     android:background="@drawable/selector_radio_good"
                     android:button="@null"/>
                 <RadioButton
-                    android:layout_margin="10sp"
+                    android:layout_margin="5sp"
                     android:id="@+id/profile3_better"
-                    android:layout_width="36sp"
+                    android:layout_width="54sp"
                     android:layout_height="51sp"
                     android:background="@drawable/selector_radio_better"
                     android:button="@null"/>
@@ -225,7 +225,7 @@
                 android:layout_height="20sp"
                 android:layout_width="60sp"
                 android:layout_marginTop="5sp"
-                android:text="이름"
+                android:text="윤재웅"
                 android:textSize="12sp"
                 android:textAlignment="center"
                 app:layout_constraintTop_toBottomOf="@id/profile4_pic"
@@ -242,23 +242,23 @@
 
                 android:orientation="horizontal">
                 <RadioButton
-                    android:layout_margin="10sp"
+                    android:layout_margin="5sp"
                     android:id="@+id/profile4_bad"
-                    android:layout_width="36sp"
+                    android:layout_width="54sp"
                     android:layout_height="51sp"
                     android:background="@drawable/selector_radio_bad"
                     android:button="@null"/>
                 <RadioButton
-                    android:layout_margin="10sp"
+                    android:layout_margin="5sp"
                     android:id="@+id/profile4_good"
-                    android:layout_width="36sp"
+                    android:layout_width="54sp"
                     android:layout_height="51sp"
                     android:background="@drawable/selector_radio_good"
                     android:button="@null"/>
                 <RadioButton
-                    android:layout_margin="10sp"
+                    android:layout_margin="5sp"
                     android:id="@+id/profile4_better"
-                    android:layout_width="36sp"
+                    android:layout_width="54sp"
                     android:layout_height="51sp"
                     android:background="@drawable/selector_radio_better"
                     android:button="@null"/>
