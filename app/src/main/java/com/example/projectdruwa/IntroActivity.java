@@ -17,7 +17,7 @@ public class IntroActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-            },1000 //1초후 메인액티비티로 넘어감
+            },2000 //2초후 메인액티비티로 넘어감 (시간설정)
         );
     }
     @Override
