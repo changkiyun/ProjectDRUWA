@@ -76,7 +76,7 @@
                 <TextView
                     android:id="@+id/tv1"
                     android:layout_gravity="center_vertical"
-                    android:text="최대인원"
+                    android:text="날짜"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -94,7 +94,7 @@
                 <TextView
                     android:id="@+id/tv2"
                     android:layout_gravity="center_vertical"
-                    android:text="타수"
+                    android:text="최대인원"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -112,7 +112,7 @@
                 <TextView
                     android:id="@+id/tv3"
                     android:layout_gravity="center_vertical"
-                    android:text="성별"
+                    android:text="타수"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -130,7 +130,7 @@
                 <TextView
                     android:id="@+id/tv4"
                     android:layout_gravity="center_vertical"
-                    android:text="최대인원"
+                    android:text="성별"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -148,7 +148,7 @@
                 <TextView
                     android:id="@+id/tv5"
                     android:layout_gravity="center_vertical"
-                    android:text="장소"
+                    android:text="나이"
                     android:textSize="20sp" />
 
                 <Spinner
