@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectDRUWA">
         <activity
-            android:name=".MainActivity"
+            android:name=".IntroActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,6 +20,7 @@
         </activity>
         <activity android:name=".RoundingCreate" android:label="두번째회면"/>
         <activity android:name=".ProfileEdit" android:label="프로필편집" />
+        <activity android:name=".MainActivity"/>
     </application>
 
 </manifest>
