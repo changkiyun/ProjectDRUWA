@@ -67,6 +67,13 @@ public class MainActivity extends AppCompatActivity {
                                 .replace(R.id.container, userInformation).commit();
 
                         return true;
+
+                    case R.id.tab4:
+                        Toast.makeText(getApplicationContext(), "피드백 탭 선택됨", Toast.LENGTH_SHORT).show();
+                        getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.container, userInformation).commit();
+
+                        return true;
                 }
 
                 return false;
@@ -81,6 +88,8 @@ public class MainActivity extends AppCompatActivity {
         } else if (position == 1) {
             bottomNavigation.setSelectedItemId(R.id.tab2);
         } else if (position == 2) {
+            bottomNavigation.setSelectedItemId(R.id.tab4);
+        } else if (position == 3) {
             bottomNavigation.setSelectedItemId(R.id.tab3);
         }
     }
