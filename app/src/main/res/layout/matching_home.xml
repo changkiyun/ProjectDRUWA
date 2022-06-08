@@ -3,7 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--매칭 종류 선택 Fragment-->
 
+    <!--타이틀-->
     <TextView
         android:id="@+id/match_home_title"
         android:layout_width="wrap_content"
@@ -16,6 +18,7 @@
         android:layout_marginTop="20sp"
         />
 
+    <!--일반매칭 버튼-->
     <Button
         android:id="@+id/match_btn1"
         android:backgroundTint="@color/teal_200"
@@ -34,6 +37,7 @@
         android:layout_marginTop="20sp"
         />
 
+    <!--강사 매칭 버튼-->
     <Button
         android:id="@+id/match_btn2"
         android:backgroundTint="@color/teal_200"

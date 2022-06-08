@@ -32,8 +32,7 @@ public class UserInformation extends Fragment {
 
     private void initUI(ViewGroup rootView){
 
-
-            btn_edit = rootView.findViewById(R.id.btn_edit);
+            btn_edit = rootView.findViewById(R.id.profileEditBtn);
             btn_edit.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

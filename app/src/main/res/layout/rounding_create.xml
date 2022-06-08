@@ -5,17 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <!--라운딩 등록 레이아웃-->
 
-    <!--유저 이미지, 사진버튼, 텍스트뷰-->
-
-    <!--에딧 텍스트 방제목 입력칸-->
-
+    <!--타이틀-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
-        android:gravity="left"
         android:text="라운딩 등록"
         android:textSize="30sp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -23,6 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!--라운딩 사진 등록-->
     <ImageView
         android:id="@+id/userImg"
         android:layout_width="100sp"
@@ -34,6 +32,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!--방제목 설정-->
     <EditText
         android:id="@+id/createRoomName"
         android:layout_width="350sp"
@@ -46,9 +45,6 @@
         app:layout_constraintTop_toBottomOf="@+id/userImg" />
 
     <!--최대인원~장소까지 묶인 스크롤뷰-->
-
-    <!--라운딩 개설 버튼-->
-
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="350sp"
@@ -163,6 +159,7 @@
 
     </ScrollView>
 
+    <!--라운딩 개설 버튼-->
     <Button
         android:id="@+id/createRoom"
         android:layout_width="200sp"

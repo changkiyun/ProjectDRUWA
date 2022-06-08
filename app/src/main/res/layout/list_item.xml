@@ -9,13 +9,12 @@
     android:layout_marginBottom="4sp"
     app:cardBackgroundColor="#ffffff"
     app:cardCornerRadius="10sp"
-    app:cardElevation="5sp"
-
-    >
+    app:cardElevation="5sp">
+    <!--매칭리스트 RecyclerView에 들어갈 아이템의 레이아웃-->
 
     <LinearLayout
         android:layout_gravity="center_vertical"
-        android:id="@+id/matchListlayout1"
+        android:id="@+id/matchListlayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
