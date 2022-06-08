@@ -18,8 +18,6 @@ public class MatchListAdapter extends RecyclerView.Adapter<MatchListAdapter.View
 
     int layoutType = 0;
 
-
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -86,7 +84,6 @@ public class MatchListAdapter extends RecyclerView.Adapter<MatchListAdapter.View
                     }
                 }
             });
-
         }
 
         public void setItem(MatchingItem item){

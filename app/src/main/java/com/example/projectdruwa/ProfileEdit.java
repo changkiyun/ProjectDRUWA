@@ -9,7 +9,7 @@ import android.widget.ImageButton;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-
+//프로필 편집화면 액티비티
 public class ProfileEdit extends AppCompatActivity {
 
     @Override

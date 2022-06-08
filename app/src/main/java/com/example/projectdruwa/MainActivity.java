@@ -18,27 +18,21 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
 
-    // matchingList, userInformation Fragment 변수 YCK
+    // Fragment 변수
     MatchingList matchingList;
     MessageList messageList;
     UserInformation userInformation;
     MatchHome matchHome;
 
-    //네비게이션바 변수 YCK
+    //네비게이션바 변수
     BottomNavigationView bottomNavigation;
-
-    //CJW : 상단 필터링 이미지 버튼 용 다이얼로그 변수
-    Dialog filterDialog;
-
-    //매너평가 화면출력
-    ImageButton btn1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Fragment 전환 코드 YCK
+        //Fragment 전환 코드
         userInformation = new UserInformation();
         messageList = new MessageList();
         matchingList = new MatchingList();
@@ -51,48 +45,46 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
-                    case R.id.tab1:
-                        Toast.makeText(getApplicationContext(), "매칭리스트 탭 선택됨", Toast.LENGTH_SHORT).show();
+                    case R.id.matchTab: //매칭리스트 탭을 호출
                         getSupportFragmentManager().beginTransaction()
-                                .replace(R.id.container, matchHome).commit();
-
-                        return true;
-                    case R.id.tab2:
-                        Toast.makeText(getApplicationContext(), "참여리스트 탭 선택됨", Toast.LENGTH_SHORT).show();
-                        getSupportFragmentManager().beginTransaction()
-                                .replace(R.id.container, messageList).commit();
-
-                        return true;
-                    case R.id.tab3:
-                        Toast.makeText(getApplicationContext(), "유저정보 탭 선택됨", Toast.LENGTH_SHORT).show();
-                        getSupportFragmentManager().beginTransaction()
-                                .replace(R.id.container, userInformation).commit();
-
+                                .replace(R.id.container, matchHome)
+                                .commit();
                         return true;
 
-                    case R.id.tab4:
-                        Toast.makeText(getApplicationContext(), "피드백 탭 선택됨", Toast.LENGTH_SHORT).show();
+                    case R.id.msgTab: //참여리스트(채팅) 탭을 호출
                         getSupportFragmentManager().beginTransaction()
-                                .replace(R.id.container, userInformation).commit();
+                                .replace(R.id.container, messageList)
+                                .commit();
+                        return true;
 
+                    case R.id.feedbackTab: //피드백 탭을 호출
+                        getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.container, userInformation)
+                                //TODO: 피드백 레이아웃 미구현으로인해 임시로 내 정보탭을 연결함
+                                .commit();
+                        return true;
+
+                    case R.id.infoTab: //내 정보 탭을 호출
+                        getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.container, userInformation)
+                                .commit();
                         return true;
                 }
-
                 return false;
             }
         });
     }
-    //aa
-    //Fragment 전환 코드 YCK
+
+    //Fragment 전환 코드
     public void onTabSelected(int position) {
         if (position == 0) {
-            bottomNavigation.setSelectedItemId(R.id.tab1);
+            bottomNavigation.setSelectedItemId(R.id.matchTab);
         } else if (position == 1) {
-            bottomNavigation.setSelectedItemId(R.id.tab2);
+            bottomNavigation.setSelectedItemId(R.id.msgTab);
         } else if (position == 2) {
-            bottomNavigation.setSelectedItemId(R.id.tab4);
+            bottomNavigation.setSelectedItemId(R.id.feedbackTab);
         } else if (position == 3) {
-            bottomNavigation.setSelectedItemId(R.id.tab3);
+            bottomNavigation.setSelectedItemId(R.id.infoTab);
         }
     }
 
@@ -100,10 +92,10 @@ public class MainActivity extends AppCompatActivity {
     public void change_match(int i){
         if (i == 0) //매칭 홈화면 복귀
             getSupportFragmentManager().beginTransaction().replace(R.id.container, matchHome).commit();
-        if (i == 1) //일반 매칭화면 전환
+        else if (i == 1) //일반 매칭화면 전환
             getSupportFragmentManager().beginTransaction().replace(R.id.container, matchingList).commit();
-        if (i == 2) { // 강사 매칭 화면 전환
-            //TODO: 강사매칭 화면 연결 필요
+        else if (i == 2) { // 강사 매칭 화면 전환
+            //TODO: 강사매칭 레이아웃 구현 필요
         }
     }
 }
