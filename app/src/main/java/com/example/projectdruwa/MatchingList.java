@@ -109,7 +109,7 @@ public class MatchingList extends Fragment {
         filterDialog= new Dialog(getContext());
         filterDialog.setContentView(R.layout.filtering);
 
-        ImageButton filtering = rootView.findViewById(R.id.button2);
+        ImageButton filtering = rootView.findViewById(R.id.filterBtn);
         filtering.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -133,7 +133,7 @@ public class MatchingList extends Fragment {
         });
 
         //뒤로가기 버튼 클릭시 매칭 선택화면으로 돌아가는 기능 코드
-        backbtn = rootView.findViewById(R.id.backbtn);
+        backbtn = rootView.findViewById(R.id.backBtn);
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

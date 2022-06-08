@@ -4,10 +4,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
+    <!--내정보 타이틀-->
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/message_const1"
+        android:id="@+id/title_Info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -18,9 +20,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="13sp"
-            android:layout_marginLeft="20sp"
+            android:layout_marginStart="20sp"
             android:layout_marginBottom="40sp"
-            android:gravity="left"
             android:text="내 정보"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -30,39 +31,29 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <!--프로필 정보 레이아웃-->
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraint_profile2"
-        android:layout_width="410dp"
+        android:id="@+id/profileLayout"
+        android:layout_width="match_parent"
         android:layout_height="112dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/message_const1">
+        app:layout_constraintTop_toBottomOf="@+id/title_Info">
 
         <EditText
             android:id="@+id/editTextTextPersonName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="20sp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:minHeight="48dp"
+            android:minHeight="48sp"
+            android:layout_marginStart="10sp"
             android:text="Name"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
-
-        <EditText
-            android:id="@+id/editTextTextPersonName2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="20sp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:text="Bronze"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/myProfile"/>
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/myProfile"
             android:layout_width="140sp"
             android:layout_height="wrap_content"
             android:src="@drawable/lion2"
@@ -71,8 +62,20 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <!--매너온도 표현 위치 TODO : ProgressBar로 변경   -->
+    <ImageView
+        android:id="@+id/mannerScore"
+        android:layout_width="match_parent"
+        android:layout_height="70sp"
+        android:layout_marginTop="20sp"
+        app:layout_constraintTop_toBottomOf="@id/profileLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/manner" />
+
+    <!--프로필 편집 버튼-->
     <Button
-        android:id="@+id/btn_edit"
+        android:id="@+id/profileEditBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/teal_200"
@@ -83,7 +86,22 @@
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/constraint_profile2"
+        app:layout_constraintTop_toBottomOf="@id/mannerScore"
         tools:ignore="TouchTargetSizeCheck" />
+
+    <!--동네 인증 버튼-->
+    <Button
+        android:id="@+id/locationEditBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_200"
+        android:layout_marginTop="20sp"
+        android:text="우리 동네 인증"
+        android:textColor="@color/white"
+        android:paddingHorizontal="40sp"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileEditBtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
