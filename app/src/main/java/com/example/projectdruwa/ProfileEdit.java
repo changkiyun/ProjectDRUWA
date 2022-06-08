@@ -17,7 +17,7 @@ public class ProfileEdit extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile_edit);
 
-        Button button7 = findViewById(R.id.button7);
+        Button button7 = findViewById(R.id.applyBtn);
         button7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -25,7 +25,7 @@ public class ProfileEdit extends AppCompatActivity {
             }
         });
 
-        ImageButton imgeButton2 = findViewById(R.id.imageButton2);
+        ImageButton imgeButton2 = findViewById(R.id.backbtn_profile);
         imgeButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
