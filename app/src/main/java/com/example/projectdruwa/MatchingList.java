@@ -35,6 +35,10 @@ public class MatchingList extends Fragment {
 
     Dialog filterDialog;
 
+    //YJW
+    ImageButton backbtn;
+    MainActivity mainactivity;
+
     public void onAttach(Context context){
         super.onAttach(context);
 
@@ -43,6 +47,9 @@ public class MatchingList extends Fragment {
         if(context instanceof OnTapItemSelectedListener){
             listener = (OnTapItemSelectedListener) context;
         }
+
+        //YJW
+        mainactivity=(MainActivity)getActivity();
     }
 
     public void onDetach(){
@@ -52,6 +59,9 @@ public class MatchingList extends Fragment {
             context = null;
             listener = null;
         }
+
+        //YJW
+        mainactivity=null;
     }
 
     @Nullable
@@ -63,6 +73,7 @@ public class MatchingList extends Fragment {
     }
 
     private void initUI(ViewGroup rootView){
+
 
         matchList = rootView.findViewById(R.id.matchListRecycler);
 
@@ -130,6 +141,15 @@ public class MatchingList extends Fragment {
             public void onClick(View view) {
                 Intent intend = new Intent(getContext(),RoundingCreate.class);
                 startActivity(intend);
+            }
+        });
+
+        //YJW
+        backbtn = rootView.findViewById(R.id.backbtn);
+        backbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mainactivity.change_match(0);
             }
         });
 
