@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     MatchingList matchingList;
     MessageList messageList;
     UserInformation userInformation;
+    MatchHome matchHome;
 
     //네비게이션바 변수 YCK
     BottomNavigationView bottomNavigation;
@@ -41,8 +42,9 @@ public class MainActivity extends AppCompatActivity {
         userInformation = new UserInformation();
         messageList = new MessageList();
         matchingList = new MatchingList();
+        matchHome = new MatchHome();
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.container, matchingList).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, matchHome).commit();
 
         bottomNavigation = findViewById(R.id.bottom_navigation);
         bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -52,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.tab1:
                         Toast.makeText(getApplicationContext(), "매칭리스트 탭 선택됨", Toast.LENGTH_SHORT).show();
                         getSupportFragmentManager().beginTransaction()
-                                .replace(R.id.container, matchingList).commit();
+                                .replace(R.id.container, matchHome).commit();
 
                         return true;
                     case R.id.tab2:
@@ -94,4 +96,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //매칭홈 리스트출력 버튼 클릭 이벤트
+    public void change_match(int i){
+        if (i == 1)
+            getSupportFragmentManager().beginTransaction().replace(R.id.container, matchingList).commit();
+        if (i == 2) {
+            //TODO: 강사매칭 화면 연결 필요
+        }
+    }
 }
