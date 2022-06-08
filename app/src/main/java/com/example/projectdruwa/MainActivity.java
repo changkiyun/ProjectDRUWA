@@ -98,9 +98,11 @@ public class MainActivity extends AppCompatActivity {
 
     //매칭홈 리스트출력 버튼 클릭 이벤트
     public void change_match(int i){
-        if (i == 1)
+        if (i == 0) //매칭 홈화면 복귀
+            getSupportFragmentManager().beginTransaction().replace(R.id.container, matchHome).commit();
+        if (i == 1) //일반 매칭화면 전환
             getSupportFragmentManager().beginTransaction().replace(R.id.container, matchingList).commit();
-        if (i == 2) {
+        if (i == 2) { // 강사 매칭 화면 전환
             //TODO: 강사매칭 화면 연결 필요
         }
     }
