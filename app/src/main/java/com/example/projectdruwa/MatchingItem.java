@@ -1,5 +1,6 @@
 package com.example.projectdruwa;
 
+//매칭리스트의 RecyclerView에 들어갈 아이템을 설정하는 클래스
 public class MatchingItem {
     String profile;
     String matchName;

@@ -3,26 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/tab1"
+        android:id="@+id/matchTab"
         app:showAsAction="ifRoom"
         android:enabled="true"
         android:icon="@drawable/home_test"
         android:iconTint="#2E8379"
         android:title="홈"/>
     <item
-        android:id="@+id/tab2"
+        android:id="@+id/msgTab"
         app:showAsAction="ifRoom"
         android:enabled="true"
         android:icon="@drawable/message_test"
         android:title="채팅"/>
     <item
-        android:id="@+id/tab4"
+        android:id="@+id/feedbackTab"
         app:showAsAction="ifRoom"
         android:enabled="true"
         android:icon="@drawable/feedback_test"
         android:title="피드백" />
     <item
-        android:id="@+id/tab3"
+        android:id="@+id/infoTab"
         app:showAsAction="ifRoom"
         android:enabled="true"
         android:icon="@drawable/people_test"

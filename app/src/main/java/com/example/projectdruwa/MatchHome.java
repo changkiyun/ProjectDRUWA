@@ -12,12 +12,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-//user_information Fragment 처리 YCK
+//매칭리스트 홈 Fragment
 public class MatchHome extends Fragment {
 
+    //매칭 선택 버튼 변수
     Button matchbtn1;
     Button matchbtn2;
 
+    //메인액티비티를 가져오기 위한 변수
     MainActivity mainactivity;
 
     @Override
@@ -34,25 +36,24 @@ public class MatchHome extends Fragment {
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        //Create Fragment 창기
+        //Create Fragment
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.matching_home, container, false);
-
         initUI(rootView);
-
         return rootView;
-
-
     }
 
     private void initUI(ViewGroup rootView){
         matchbtn1 = rootView.findViewById(R.id.match_btn1);
         matchbtn2 = rootView.findViewById(R.id.match_btn2);
+
+        //버튼 클릭시 각각 해당하는 Fragment를 불러오는 리스터 (1 : 일반 매칭, 2 : 강사 매칭)
         matchbtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mainactivity.change_match(1);
             }
         });
+
         matchbtn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,5 +62,3 @@ public class MatchHome extends Fragment {
         });
     }
 }
-
-

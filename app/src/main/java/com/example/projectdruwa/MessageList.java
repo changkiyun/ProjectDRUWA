@@ -16,15 +16,14 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-//MatchingList Fragment 처리 YCK
+//MessageList Fragment
 public class MessageList extends Fragment {
+    Context context;
     RecyclerView messageList;
     MatchListAdapter adapter;
-
-    Context context;
     OnTapItemSelectedListener listener;
 
-    //매너평가 다이얼로그
+    //매너평가 다이얼로그 변수
     Dialog manner_dlg;
 
     public void onAttach(Context context){
@@ -61,11 +60,10 @@ public class MessageList extends Fragment {
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
         messageList.setLayoutManager(layoutManager);
 
+        //RecyclerView에 아이템 추가
         adapter = new MatchListAdapter();
-
         adapter.addItem(new MatchingItem("매칭1", "2022년 5월 18일", "서대문구 홍은동"));
         adapter.addItem(new MatchingItem("매칭3", "2022년 5월 18일", "서대문구 연희동"));
-
 
         messageList.setAdapter(adapter);
 
@@ -74,9 +72,8 @@ public class MessageList extends Fragment {
             @Override
             public void onItemClick(MatchListAdapter.ViewHolder holder, View view, int position) {
                 MatchingItem item = adapter.getItem(position);
-                Toast.makeText(getContext(), position + "번째 매칭중인 대화방 선택됨", Toast.LENGTH_SHORT).show();
 
-                //매너평가화면 출력
+                //매너평가 다이얼로그 출력
                 manner_dlg = new Dialog(getContext());
                 manner_dlg.setContentView(R.layout.manner_score);
                 showdlg();
@@ -85,11 +82,11 @@ public class MessageList extends Fragment {
 
     }
 
-    //매너평가 다이얼로그 클래스
+    //매너평가 다이얼로그 메소드
     public void showdlg() {
         manner_dlg.show();
 
-        //취소버튼 이벤트
+        //취소버튼 리스너
         Button noBtn = manner_dlg.findViewById(R.id.manner_cancel);
         noBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -99,7 +96,7 @@ public class MessageList extends Fragment {
             }
         });
         
-        //확인버튼 이벤트
+        //확인버튼 리스너
         manner_dlg.findViewById(R.id.manner_confirm).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

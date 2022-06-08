@@ -24,44 +24,38 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-//MatchingList Fragment 처리 YCK
+//MatchingList Fragment
 public class MatchingList extends Fragment {
-    RecyclerView matchList;
-    MatchListAdapter adapter;
-    View search;
 
     Context context;
-    OnTapItemSelectedListener listener;
-
-    Dialog filterDialog;
-
-    //YJW
+    View search;
     ImageButton backbtn;
+    RecyclerView matchList;
+    OnTapItemSelectedListener listener;
+    MatchListAdapter adapter;
     MainActivity mainactivity;
+
+    //필터링 다이얼로그 변수
+    Dialog filterDialog;
 
     public void onAttach(Context context){
         super.onAttach(context);
-
         this.context=context;
+        mainactivity=(MainActivity)getActivity();
 
         if(context instanceof OnTapItemSelectedListener){
             listener = (OnTapItemSelectedListener) context;
         }
-
-        //YJW
-        mainactivity=(MainActivity)getActivity();
     }
 
     public void onDetach(){
         super.onDetach();
+        mainactivity=null;
 
         if(context != null){
             context = null;
             listener = null;
         }
-
-        //YJW
-        mainactivity=null;
     }
 
     @Nullable
@@ -74,14 +68,13 @@ public class MatchingList extends Fragment {
 
     private void initUI(ViewGroup rootView){
 
-
         matchList = rootView.findViewById(R.id.matchListRecycler);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
         matchList.setLayoutManager(layoutManager);
 
+        //RecyclerView에 아이템을 추가
         adapter = new MatchListAdapter();
-
         adapter.addItem(new MatchingItem("매칭1", "2022년 5월 18일", "서대문구 홍은동"));
         adapter.addItem(new MatchingItem("매칭2", "2022년 5월 18일", "서대문구 남가좌동"));
         adapter.addItem(new MatchingItem("매칭3", "2022년 5월 18일", "서대문구 연희동"));
@@ -112,28 +105,23 @@ public class MatchingList extends Fragment {
             }
         });
 
-        //CJW : 상단 햄버거 버튼 클릭시 다이얼로그 창 필터링열기
+        //상단 햄버거 버튼 클릭시 필터링 다이얼로그 출력
         filterDialog= new Dialog(getContext());
-        filterDialog.setContentView(R.layout.filtering);             // xml 레이아웃 파일과 연결
+        filterDialog.setContentView(R.layout.filtering);
 
         ImageButton filtering = rootView.findViewById(R.id.button2);
         filtering.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                filterDialogShow(); // 다이얼로그 띄우기
-                //CJW : 주변 반투명 없애기, 상단 위치조정
+                filterDialogShow(); // 다이얼로그 실행
+                //다이얼로그 주변 반투명 없애기, 상단 위치조정
                 filterDialog.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
                 filterDialog.getWindow().setGravity(Gravity.TOP);
-
-
             }
         });
 
-        //CJW : 하단 + 버튼 클릭시 인텐드 넘겨서 rounding_create 열기
-        /*CJW : 필터링 다이얼로그 안의 기능 구현하는 함수.
-            일단 적용, 취소버튼 전부 다이얼로그를 종료하도록 연결하였음.*/
-        //TODO CJW 1 : 적용버튼 누르면 DB에 스피너에서 설정한 정보대로 저장하고, 그것을 토대로 검색
-
+        //레이아웃 하단에 FloatingActionButton을 클릭 시 라운딩 등록 화면 출럭
+        //TODO : 적용버튼 누르면 DB에 스피너에서 설정한 정보대로 저장하고, 그것을 토대로 검색
         FloatingActionButton roundingCreate;
         roundingCreate = rootView.findViewById(R.id.roundingCreateButton);
         roundingCreate.setOnClickListener(new View.OnClickListener() {
@@ -144,7 +132,7 @@ public class MatchingList extends Fragment {
             }
         });
 
-        //YJW
+        //뒤로가기 버튼 클릭시 매칭 선택화면으로 돌아가는 기능 코드
         backbtn = rootView.findViewById(R.id.backbtn);
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -152,11 +140,11 @@ public class MatchingList extends Fragment {
                 mainactivity.change_match(0);
             }
         });
-
     }
 
+    //필터링 다이얼로그에서 취소,적용을 구현할 메소드
     public void filterDialogShow(){
-        // 취소
+        // 필터링 취소
         filterDialog.show();
         Button cancelFiltering = filterDialog.findViewById(R.id.cancelFiltering);
         cancelFiltering.setOnClickListener(new View.OnClickListener() {
@@ -165,7 +153,7 @@ public class MatchingList extends Fragment {
                 filterDialog.dismiss();
             }
         });
-        // 적용
+        // 필터링 적용
         Button applyFiltering = filterDialog.findViewById(R.id.applyFiltering);
         applyFiltering.setOnClickListener(new View.OnClickListener() {
             @Override
