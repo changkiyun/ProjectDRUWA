@@ -23,7 +23,7 @@ public class MessageList extends Fragment {
     MatchListAdapter adapter;
     OnTapItemSelectedListener listener;
 
-    //매너평가 다이얼로그 변수
+    //매너평가 다이얼로그 변수.
     Dialog manner_dlg;
 
     public void onAttach(Context context){
