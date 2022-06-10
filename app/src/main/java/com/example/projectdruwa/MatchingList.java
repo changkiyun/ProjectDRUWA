@@ -8,7 +8,6 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -16,7 +15,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.Constraints;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -61,7 +59,7 @@ public class MatchingList extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.maching_list, container, false);
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.matching_list, container, false);
         initUI(rootView);
         return rootView;
     }
@@ -75,15 +73,15 @@ public class MatchingList extends Fragment {
 
         //RecyclerView에 아이템을 추가
         adapter = new MatchListAdapter();
-        adapter.addItem(new MatchingItem("매칭1", "2022년 5월 18일", "서대문구 홍은동"));
-        adapter.addItem(new MatchingItem("매칭2", "2022년 5월 18일", "서대문구 남가좌동"));
-        adapter.addItem(new MatchingItem("매칭3", "2022년 5월 18일", "서대문구 연희동"));
-        adapter.addItem(new MatchingItem("매칭1", "2022년 5월 18일", "서대문구 홍은동"));
-        adapter.addItem(new MatchingItem("매칭2", "2022년 5월 18일", "서대문구 남가좌동"));
-        adapter.addItem(new MatchingItem("매칭3", "2022년 5월 18일", "서대문구 연희동"));
-        adapter.addItem(new MatchingItem("매칭1", "2022년 5월 18일", "서대문구 홍은동"));
-        adapter.addItem(new MatchingItem("매칭2", "2022년 5월 18일", "서대문구 남가좌동"));
-        adapter.addItem(new MatchingItem("매칭3", "2022년 5월 18일", "서대문구 연희동"));
+        adapter.addItem(new MatchingItem("매칭1", "3월 18일", "서대문구 홍은동"));
+        adapter.addItem(new MatchingItem("매칭2", "3월 21일", "서대문구 남가좌동"));
+        adapter.addItem(new MatchingItem("매칭3", "4월 4일", "서대문구 연희동"));
+        adapter.addItem(new MatchingItem("매칭4", "4월 16일", "서대문구 홍은동"));
+        adapter.addItem(new MatchingItem("매칭5", "5월 18일", "서대문구 남가좌동"));
+        adapter.addItem(new MatchingItem("매칭6", "5월 19일", "서대문구 연희동"));
+        adapter.addItem(new MatchingItem("매칭7", "5월 26일", "서대문구 홍은동"));
+        adapter.addItem(new MatchingItem("매칭8", "6월 1일", "서대문구 남가좌동"));
+        adapter.addItem(new MatchingItem("매칭9", "6월 10일", "서대문구 연희동"));
 
         matchList.setAdapter(adapter);
 
