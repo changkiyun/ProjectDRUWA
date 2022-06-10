@@ -62,8 +62,8 @@ public class MessageList extends Fragment {
 
         //RecyclerView에 아이템 추가
         adapter = new MatchListAdapter();
-        adapter.addItem(new MatchingItem("매칭1", "2022년 5월 18일", "서대문구 홍은동"));
-        adapter.addItem(new MatchingItem("매칭3", "2022년 5월 18일", "서대문구 연희동"));
+        adapter.addItem(new MatchingItem("매칭1", "5월 18일", "서대문구 홍은동"));
+        adapter.addItem(new MatchingItem("매칭3", "5월 18일", "서대문구 연희동"));
 
         messageList.setAdapter(adapter);
 
